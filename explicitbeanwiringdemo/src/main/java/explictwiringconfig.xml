@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="b1" class="edu.jspiders.explicitbeanwiringdemo.beans.ClassB">
+		<property name="m" value="10"></property>
+	</bean>
+	
+	<bean id="b2" class="edu.jspiders.explicitbeanwiringdemo.beans.ClassB">
+		<property name="m" value="20"></property>
+	</bean>
+	
+	<bean id="a1" class="edu.jspiders.explicitbeanwiringdemo.beans.ClassA">
+		<property name="x" value="100"></property>
+		<property name="b" ref="b2"></property>
+	</bean>
+
+</beans>

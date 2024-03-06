@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="motherBoard" class="edu.jspiders.explicitbeanwiringdemo.beans.MotherBoard">
+		<property name="brand" value="gigabyte"/>
+		<property name="price" value="6500.00"/>
+	</bean>
+	
+	<bean id="ram" class="edu.jspiders.explicitbeanwiringdemo.beans.Ram">
+		<property name="brand" value="biostar"/>
+		<property name="price" value="7500.00"/>
+	</bean>
+	
+	<bean id="processor" class="edu.jspiders.explicitbeanwiringdemo.beans.Processor">
+		<constructor-arg name="brand" value="intel"/>
+		<constructor-arg name="price" value="17500.00"/>
+	</bean>
+	
+	<bean id="hardDisk" class="edu.jspiders.explicitbeanwiringdemo.beans.HardDisk">
+		<constructor-arg name="brand" value="seagate"/>
+		<constructor-arg name="price" value="4500.00"/>
+	</bean>
+	
+	<bean id="cpu" class="edu.jspiders.explicitbeanwiringdemo.beans.CPU">
+		<constructor-arg name="mb" ref="motherBoard"/>
+		<constructor-arg name="ram" ref="ram"/>
+		<constructor-arg name="pro" ref="processor"/>
+		<constructor-arg name="hd" ref="hardDisk"/>
+	</bean>
+</beans>

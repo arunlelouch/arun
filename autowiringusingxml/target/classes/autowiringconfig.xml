@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- <bean id="b1" class="edu.jspiders.autowiringusingxml.beans.ClassB">
+		<property name="x" value="100"></property>
+	</bean>
+	
+	<bean id="b" class="edu.jspiders.autowiringusingxml.beans.ClassB">
+		<property name="x" value="200"></property>
+	</bean>
+	
+	<bean id="a" class="edu.jspiders.autowiringusingxml.beans.ClassA" autowire="byName"></bean> -->
+	
+	<!-- <bean id="b1" class="edu.jspiders.autowiringusingxml.beans.ClassB">
+		<property name="x" value="100"></property>
+	</bean> -->
+	<!-- 
+	<bean id="b2" class="edu.jspiders.autowiringusingxml.beans.ClassB">
+		<property name="x" value="200"></property>
+	</bean>
+	
+	<bean id="a" class="edu.jspiders.autowiringusingxml.beans.ClassA" autowire="byType"></bean> -->
+	
+	
+	<bean id="b2" class="edu.jspiders.autowiringusingxml.beans.ClassB">
+		<property name="x" value="200"></property>
+	</bean>
+	<bean id="a" class="edu.jspiders.autowiringusingxml.beans.ClassA" autowire="constructor"></bean>
+
+</beans>
