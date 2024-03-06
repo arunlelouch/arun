@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="col1" class="org.jspiders.setterinjectionforcollection.beans.CollectionType">
+		<property name="integerList">
+			<list>
+				<value>10</value>
+				<value>25</value>
+				<value>5</value>
+				<value>9</value>
+			</list>
+		</property>
+		
+		<property name="doubleSet">
+			<set>
+				<value>12.6</value>
+				<value>5.63</value>
+				<value>89.63</value>
+				<value>7.21</value>
+			</set>
+		</property>
+		
+		<property name="alphabetsMap">
+			<map>
+				<entry key="A" value="65"/>
+				<entry key="B" value="66"/>
+				<entry key="C" value="67"/>
+			</map>
+		</property>
+	</bean>
+
+</beans>
